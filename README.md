@@ -2,8 +2,8 @@
 
 Lab opens with a quiz and then kicks off the hackathon.
 
-To get the full point for the lab, you need to pass Tasks 1, 2, 3, 4 (version 1) during the lab. 
-Task 4 (version 2) and Task 5 must be finished by the usual deadline of Thursday 23:59.
+To get the full point for the lab, you need to pass Tasks 1, 2, 3 (version 1) during the lab. 
+Task 3 (version 2) and Task 4 must be finished by the usual deadline of Thursday 23:59.
 
 Each student builds their own project:
 - Go from idea to a deployed product.
@@ -18,15 +18,27 @@ Pen and paper quiz.
 - answer at least 2 out of 3 correctly.
 
 #### Task 2 (approved by TA during the lab).
-The project idea must:
-- Be something simple to build, clearly useful, and easy to explain;
-- Involve backend + db + web dashboard + user-facing agent;
-- Not be an LMS (different from the course project), however you can use the course project as the coding base to iterate from.
 
-Define:
+Ideate and plan your project.
+
+The **project idea** must be:
+- something simple to build;
+- clearly useful;
+- easy to explain.
+
+Define and show to your TA:
 - End users of the product
 - Which problem your product solves for the end users
 - The product idea in one short sentence
+
+When the idea is approved, then you need to **plan**:
+- prioritized features/functionality;
+- a clear breakdown of functionality into **two product versions.**
+
+Two product versions:
+- Version 1 is a functioning product that does one core thing well. Pick the feature most valuable to the end-user and relatively easy to implement.
+- Test Version 1 upon completion, show it to the TA and take note of their feedback.
+- Version 2 builds upon Version 1 and takes TA feedback from the lab into account.
 
 The product must have these components each fulfilling a useful function:
 - LLM-powered agent (preferably `nanobot`)
@@ -38,17 +50,7 @@ The product must have these components each fulfilling a useful function:
 > 1. You are advised to use the setup from Lab 8 as the base to iterate from.
 > 2. `Telegram` bots deployed on a university VM can fail to receive messages when hosted there.
 
-#### Task 3 (approved by TA during the lab).
-Produce a plan including:
-- prioritized features/functionality;
-- a clear breakdown of functionality into **two product versions.**
-
-About two product versions:
-- Version 1 is a functioning product that does one core thing well. Pick the feature most valuable to the end-user and relatively easy to implement.
-- Test Version 1 upon completion, show it to the TA and take note of their feedback.
-- Version 2 builds upon Version 1 and takes TA feedback from the lab into account.
-
-#### Task 4 (product version 1 approved by TA during the lab).
+#### Task 3 (product version 1 approved by TA during the lab).
 - Implement both versions outlined in the plan
 - Publish all code as a repo on github.
 - Dockerize all services.
@@ -58,7 +60,7 @@ Version 1 must be shown and approved by the TA during the lab.
 Version 2 can be done during the lab or after the lab before the usual deadline.
 
 
-#### Task 5.
+#### Task 4.
 Submit presentation with five slides:
 
 1. Title:
