@@ -31,7 +31,7 @@ Define and show to your TA:
 - Which problem your product solves for the end users
 - The product idea in one short sentence
 
-When the idea is approved, then you need to **plan**:
+When the idea is approved, **produce a plan**:
 - prioritized features/functionality;
 - a clear breakdown of functionality into **two product versions.**
 
