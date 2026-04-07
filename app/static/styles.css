@@ -1,0 +1,209 @@
+:root {
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --text: #172033;
+  --muted: #6e7891;
+  --border: #dde3ef;
+  --accent: #3457ff;
+  --accent-soft: #edf1ff;
+  --danger: #c93f3f;
+  --shadow: 0 10px 30px rgba(24, 39, 75, 0.08);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 32px clamp(18px, 4vw, 48px) 20px;
+}
+.hero h1 { margin: 0 0 8px; font-size: clamp(32px, 5vw, 44px); }
+.hero p { margin: 0; color: var(--muted); max-width: 720px; }
+.hero-badge {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  padding: 0 clamp(18px, 4vw, 48px) 40px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  font: inherit;
+}
+
+textarea { resize: vertical; }
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+button.secondary {
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+button.danger { background: var(--danger); }
+button:hover { opacity: 0.95; }
+.hidden { display: none; }
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox-row input {
+  width: auto;
+  margin: 0;
+}
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+.toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.toolbar h2 { margin: 0; }
+.muted { color: var(--muted); }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.stat-card {
+  background: var(--accent-soft);
+  border-radius: 16px;
+  padding: 16px;
+}
+.stat-card span {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.stat-card strong { font-size: 24px; }
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr) 180px;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.filter-favorite {
+  align-self: end;
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 0;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.item-card {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  background: #fff;
+}
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.item-header h3 { margin: 8px 0 0; }
+.rating {
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--accent);
+}
+.pill-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.pill.favorite {
+  background: #fff5d8;
+  color: #9b6b00;
+}
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+.comment {
+  min-height: 50px;
+  white-space: pre-wrap;
+}
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px;
+}
+
+@media (max-width: 1080px) {
+  .layout { grid-template-columns: 1fr; }
+  .filters-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .hero { flex-direction: column; align-items: flex-start; }
+  .filters-grid, .stats-grid, .card-actions, .form-actions { grid-template-columns: 1fr; display: grid; }
+}

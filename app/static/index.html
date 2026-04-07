@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Collection</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <h1>Book Collection</h1>
+      <p>Track books and movies with ratings, comments, filters, and favorites.</p>
+    </div>
+    <div class="hero-badge">Hackathon-ready CRUD app</div>
+  </header>
+
+  <main class="layout">
+    <section class="panel form-panel">
+      <h2 id="form-title">Add item</h2>
+      <form id="item-form">
+        <input type="hidden" id="item-id" />
+
+        <label>
+          Type
+          <select id="item-type" required>
+            <option value="book">Book</option>
+            <option value="movie">Movie</option>
+          </select>
+        </label>
+
+        <label>
+          Title
+          <input id="title" type="text" maxlength="255" required />
+        </label>
+
+        <label>
+          Rating (1-10)
+          <input id="rating" type="number" min="1" max="10" required />
+        </label>
+
+        <label>
+          Read / Watched date
+          <input id="entry-date" type="date" />
+        </label>
+
+        <label>
+          Comment
+          <textarea id="comment" rows="5" maxlength="5000" placeholder="Why did you like it or not?"></textarea>
+        </label>
+
+        <label class="checkbox-row">
+          <input id="is-favorite" type="checkbox" />
+          Mark as favorite / recommended
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Save item</button>
+          <button type="button" id="cancel-btn" class="secondary hidden">Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel content-panel">
+      <div class="toolbar">
+        <div>
+          <h2>Your collection</h2>
+          <p class="muted">Sort, filter, search, edit, and delete items.</p>
+        </div>
+        <button id="refresh-btn" class="secondary">Refresh</button>
+      </div>
+
+      <div class="stats-grid" id="stats"></div>
+
+      <div class="filters-grid">
+        <label>
+          Search
+          <input id="search" type="text" placeholder="Search by title or comment" />
+        </label>
+        <label>
+          Type
+          <select id="filter-type">
+            <option value="all">All</option>
+            <option value="book">Books</option>
+            <option value="movie">Movies</option>
+          </select>
+        </label>
+        <label>
+          Sort by
+          <select id="sort-by">
+            <option value="created_at">Added time</option>
+            <option value="rating">Rating</option>
+            <option value="title">Title</option>
+            <option value="entry_date">Read/Watched date</option>
+          </select>
+        </label>
+        <label>
+          Order
+          <select id="order">
+            <option value="desc">Descending</option>
+            <option value="asc">Ascending</option>
+          </select>
+        </label>
+        <label class="checkbox-row filter-favorite">
+          <input id="favorite-only" type="checkbox" />
+          Favorites only
+        </label>
+      </div>
+
+      <div id="items" class="items-grid"></div>
+      <p id="empty-state" class="empty-state hidden">No items found. Add your first book or movie.</p>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
