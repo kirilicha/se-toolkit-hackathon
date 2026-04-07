@@ -11,6 +11,17 @@ Add screenshots here after you run the project:
 - Edit item flow
 - Statistics cards
 
+## Demo screenshots
+
+### Add item
+![Add item](./screenshots/add%20item.png)
+
+### Collection overview
+![Collection overview](./screenshots/yourcol.png)
+
+### Collection cards
+![Collection cards](./screenshots/collections.png)
+
 ## Product context
 
 ### End users
